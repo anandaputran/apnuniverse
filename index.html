@@ -12,35 +12,52 @@
   <body>
     <main class="gateway">
       <section class="gateway-intro">
-        <p class="gateway-eyebrow">Welcome to</p>
+        <div class="gateway-brand">
+          <p class="gateway-eyebrow">WELCOME TO</p>
 
-        <h1 class="gateway-title">
           <img src="assets/logo-apn-light.webp" alt="APN" class="gateway-logo" />
-          <span>UNIVERSE</span>
-        </h1>
 
-        <p class="gateway-description">Get to know me, or see how I can help.</p>
+          <h1 class="gateway-title">UNIVERSE</h1>
+        </div>
       </section>
+
+      <div class="gateway-connector" aria-hidden="true">
+        <span class="connector-stem"></span>
+        <span class="connector-branch"></span>
+        <span class="connector-left"></span>
+        <span class="connector-right"></span>
+      </div>
 
       <section class="gateway-options">
         <a href="https://anandaputran.github.io/" class="gateway-card">
-          <span class="gateway-card-label">Explore</span>
+          <h2 class="gateway-card-title">PORTFOLIO</h2>
 
-          <div>
-            <h2>Portfolio</h2>
-            <p>Get to know me.</p>
+          <div class="gateway-card-preview">
+            <span>Preview</span>
           </div>
+
+          <p class="gateway-card-action">GET TO KNOW ME</p>
         </a>
 
         <div class="gateway-card gateway-card--disabled">
-          <span class="gateway-card-label">In Development</span>
+          <h2 class="gateway-card-title">SERVICES</h2>
 
-          <div>
-            <h2>Coming Soon</h2>
-            <p>Something new is taking shape.</p>
+          <div class="gateway-card-preview gateway-card-preview--disabled">
+            <span>COMING SOON</span>
           </div>
+
+          <p class="gateway-card-action">SEE HOW I CAN HELP</p>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="assets/apn-logo.webp" alt="" class="footer-logo" aria-hidden="true" />
+        <span>Ananda Putra Nugraha</span>
+      </div>
+
+      <p class="footer-copyright">© 2026 All rights reserved.</p>
+    </footer>
   </body>
 </html>

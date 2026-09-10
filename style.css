@@ -10,8 +10,12 @@ html {
   font-family: "DM Sans", sans-serif;
 }
 
+html,
 body {
-  min-height: 100vh;
+  min-height: 100%;
+}
+
+body {
   background: #0b0b0b;
   color: #f5f5f5;
 }
@@ -26,68 +30,167 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
+  gap: 1rem;
   width: min(1100px, calc(100% - 48px));
   margin: 0 auto;
   padding: 48px 0;
 }
 
 .gateway-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.gateway-eyebrow {
-  margin-bottom: 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.6;
+.gateway-brand {
+  width: min(100%, 360px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
 }
 
+.gateway-eyebrow,
 .gateway-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-
-  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.gateway-eyebrow {
+  margin-bottom: -3rem;
+  margin-right: -0.2em;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  z-index: 1;
 }
 
 .gateway-logo {
-  width: clamp(72px, 10vw, 120px);
+  width: 100%;
   height: auto;
   display: block;
 }
 
-.gateway-description {
-  margin-top: 1.25rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  line-height: 1.6;
-  opacity: 0.72;
+.gateway-title {
+  margin-top: -3rem;
+  margin-right: -0.4em;
+  letter-spacing: 0.5em;
+  z-index: 1;
+}
+
+.gateway-connector {
+  position: relative;
+  width: 352px;
+  height: 80px;
+  margin: -0.5rem auto 0;
+}
+
+.connector-stem {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 40px;
+
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(-50%);
+}
+
+.connector-branch {
+  position: absolute;
+  top: 40px;
+  left: 0;
+
+  width: 100%;
+  height: 40px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 18px 18px 0 0;
+}
+
+.connector-left,
+.connector-right {
+  top: 28px;
+  width: 1px;
+  height: 30px;
+}
+
+.connector-left {
+  left: 0;
+}
+
+.connector-right {
+  right: 0;
 }
 
 .gateway-options {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, 320px);
+  justify-content: center;
+  gap: 2rem;
 }
 
 .gateway-card {
-  min-height: 180px;
+  width: 320px;
+  min-height: 430px;
   padding: 1.5rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1.25rem;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.025);
 
   transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+
+.gateway-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.gateway-card-preview {
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.gateway-card-preview span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.35;
+}
+
+.gateway-card-action {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.55;
 }
 
 .gateway-card-label {
@@ -119,6 +222,35 @@ a.gateway-card:hover {
 .gateway-card--disabled {
   opacity: 0.4;
   cursor: default;
+}
+
+.site-footer {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 24px 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.875rem;
+  color: rgba(245, 245, 245, 0.45);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-logo {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+.footer-copyright {
+  margin: 0;
 }
 
 @media (max-width: 640px) {
