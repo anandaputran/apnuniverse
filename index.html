@@ -13,42 +13,108 @@
     <main class="gateway">
       <section class="gateway-intro">
         <div class="gateway-brand">
-          <p class="gateway-eyebrow">WELCOME TO</p>
+          <p class="gateway-eyebrow text-silver-gradient">WELCOME TO</p>
 
           <img src="assets/logo-apn-light.webp" alt="APN" class="gateway-logo" />
 
-          <h1 class="gateway-title">UNIVERSE</h1>
+          <h1 class="gateway-title text-silver-gradient">UNIVERSE</h1>
         </div>
       </section>
 
       <div class="gateway-connector" aria-hidden="true">
-        <span class="connector-stem"></span>
-        <span class="connector-branch"></span>
-        <span class="connector-left"></span>
-        <span class="connector-right"></span>
+        <svg class="connector-svg" viewBox="0 0 352 80" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="connector-gradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#DADADA" />
+              <stop offset="20%" stop-color="#9C9C9C" />
+              <stop offset="50%" stop-color="#6e6e6e" />
+              <stop offset="100%" stop-color="#383838" />
+            </linearGradient>
+          </defs>
+
+          <path
+            d="
+              M0 80
+              V58
+              Q0 40 18 40
+              H164
+              Q176 40 176 28
+              V0
+              V28
+              Q176 40 188 40
+              H334
+              Q352 40 352 58
+              V80
+            "
+            fill="none"
+            stroke="url(#connector-gradient)"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </div>
 
-      <section class="gateway-options">
-        <a href="https://anandaputran.github.io/" class="gateway-card">
-          <h2 class="gateway-card-title">PORTFOLIO</h2>
+      <div class="gateway-flow">
+        <svg class="connector-mobile" viewBox="0 0 100 200" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="connector-gradient-mobile" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#DADADA" />
+              <stop offset="20%" stop-color="#9C9C9C" />
+              <stop offset="50%" stop-color="#6e6e6e" />
+              <stop offset="100%" stop-color="#383838" />
+            </linearGradient>
+          </defs>
 
-          <div class="gateway-card-preview">
-            <span>Preview</span>
+          <path
+            d="
+          M9 68
+          H8
+          Q4 68 4 64
+          V20
+          Q4 12 10 12
+          H46
+          Q50 12 50 8
+          V5
+          V8
+          Q50 12 54 12
+          H90
+          Q96 12 96 18
+          V148
+          Q96 152 92 152
+          H91
+        "
+            fill="none"
+            stroke="url(#connector-gradient-mobile)"
+            stroke-width="1"
+            vector-effect="non-scaling-stroke"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <section class="gateway-options">
+          <a href="https://anandaputran.github.io/" class="gateway-card">
+            <h2 class="gateway-card-title text-silver-gradient">PORTFOLIO</h2>
+
+            <div class="gateway-card-preview">
+              <span>Preview</span>
+            </div>
+
+            <p class="gateway-card-action">GET TO KNOW ME</p>
+          </a>
+
+          <div class="gateway-card gateway-card--disabled">
+            <h2 class="gateway-card-title">SERVICES</h2>
+
+            <div class="gateway-card-preview">
+              <span>COMING SOON</span>
+            </div>
+
+            <p class="gateway-card-action">SEE HOW I CAN HELP</p>
           </div>
-
-          <p class="gateway-card-action">GET TO KNOW ME</p>
-        </a>
-
-        <div class="gateway-card gateway-card--disabled">
-          <h2 class="gateway-card-title">SERVICES</h2>
-
-          <div class="gateway-card-preview gateway-card-preview--disabled">
-            <span>COMING SOON</span>
-          </div>
-
-          <p class="gateway-card-action">SEE HOW I CAN HELP</p>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
